@@ -19,7 +19,11 @@ namespace IndetityServer4QuickStart
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddInMemoryApiResources(Configuration.GetApiResources())
-                .AddInMemoryClients(Configuration.GetClients());
+                .AddInMemoryClients(Configuration.GetClients())
+                // Adds support for resource owner password grant
+                // Adds support to user related services typically used by a login ui
+                // adds support for a profile based on the test users
+                .AddTestUsers(Configuration.GetUsers());
 
 
         }
