@@ -1,0 +1,63 @@
+﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
+// Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
+
+using IdentityModel.Client;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+namespace Client
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            MainAsync().GetAwaiter().GetResult();
+        }
+
+        private static async Task MainAsync()
+        {
+            // discover endpoints from metadata
+            // IdentityModel includes a client library to use with the discovery endpoint.
+            // This way you only need to know the base-address of IdentityServer 
+            // - the actual endpoints addresses can be read from the metadata:
+            var disco = await DiscoveryClient.GetAsync("http://localhost:5000");
+            if (disco.IsError)
+            {
+                Console.WriteLine(disco.Error);
+                return;
+            }
+
+            // request token
+            TokenClient tokenClient = new TokenClient(disco.TokenEndpoint, "client", "secret");
+            var tokenResponse = await tokenClient.RequestClientCredentialsAsync("api1");
+
+            if (tokenResponse.IsError)
+            {
+                Console.WriteLine(tokenResponse.Error);
+                return;
+            }
+
+            Console.WriteLine(tokenResponse.Json);
+            Console.WriteLine("\n\n");
+
+            // call api
+            HttpClient client = new HttpClient();
+
+            // To send the access token to the API you typically use the HTTP Authorization header. This is done using the SetBearerToken extension method:
+            client.SetBearerToken(tokenResponse.AccessToken);
+
+            var response = await client.GetAsync("http://localhost:5001/identity");
+            if (!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine(response.StatusCode);
+            }
+            else
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(JArray.Parse(content));
+            }
+        }
+    }
+}

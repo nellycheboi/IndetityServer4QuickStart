@@ -1,0 +1,11 @@
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\bin\Debug\netcoreapp2.0\IndetityServer4QuickStart.deps.json
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\bin\Debug\netcoreapp2.0\IndetityServer4QuickStart.runtimeconfig.json
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\bin\Debug\netcoreapp2.0\IndetityServer4QuickStart.runtimeconfig.dev.json
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\bin\Debug\netcoreapp2.0\IndetityServer4QuickStart.dll
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\obj\Debug\netcoreapp2.0\IndetityServer4QuickStart.csprojResolveAssemblyReference.cache
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\obj\Debug\netcoreapp2.0\IndetityServer4QuickStart.csproj.CoreCompileInputs.cache
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\obj\Debug\netcoreapp2.0\IndetityServer4QuickStart.AssemblyInfoInputs.cache
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\obj\Debug\netcoreapp2.0\IndetityServer4QuickStart.AssemblyInfo.cs
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\bin\Debug\netcoreapp2.0\IndetityServer4QuickStart.pdb
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\obj\Debug\netcoreapp2.0\IndetityServer4QuickStart.dll
+C:\Users\Nelly\projects\guides\IndetityServer4QuickStart\IndetityServer4QuickStart\obj\Debug\netcoreapp2.0\IndetityServer4QuickStart.pdb
